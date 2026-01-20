@@ -1,0 +1,481 @@
+@font-face {
+  font-family: flutter;
+  src: url(./flutter\ font.woff2);
+}
+* {
+  margin: 0%;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  font-family: "flutter";
+}
+section,
+nav {
+  max-width: 2000px;
+}
+html {
+  font-size: clamp(14px, 1vw, 18px);
+}
+@mixin flex-column($gap: 0rem) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+main {
+  width: 100%;
+  @include flex-column(0);
+  align-items: center;
+
+  nav {
+    width: 100%;
+    padding: 1rem 1.8rem;
+    .box {
+      padding: 0.5em;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      img {
+        width: 40%;
+        object-fit: cover;
+      }
+      .text {
+        display: flex;
+        justify-content: flex-end;
+        gap: 2rem;
+        align-items: center;
+        display: none;
+        width: 50%;
+        i {
+          font-size: 1.2rem;
+        }
+        button {
+          font-size: 1rem;
+          padding: 0.6rem 2rem;
+          border-radius: 2rem;
+          border: none;
+          background-color: #0468d7;
+          color: white;
+        }
+      }
+    }
+  }
+
+  section.view1 {
+    width: 100%;
+    padding: 4rem 1rem;
+    @include flex-column(4rem);
+    align-items: center;
+    background: linear-gradient(to bottom left, #f3fcff 50%, #fbdee8 100%);
+    .top {
+      width: 100%;
+      padding: 0.5rem;
+      @include flex-column(4rem);
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+      h1 {
+        font-size: 3rem;
+        text-align: center;
+        line-height: 1;
+      }
+    }
+    .bottom {
+      padding: 0.5rem;
+      p {
+        font-size: 2.1rem;
+        text-align: center;
+      }
+    }
+  }
+  section.view2 {
+    width: 100%;
+    padding: 4rem 2rem;
+    @include flex-column(3rem);
+
+    .box {
+      border-top: 4px solid silver;
+      width: 100%;
+      padding: 1rem 0rem;
+      @include flex-column(4rem);
+      .text {
+        @include flex-column(1rem);
+        p {
+          font-size: 1.4rem;
+          opacity: 0.7;
+        }
+      }
+
+      img {
+        width: 80%;
+      }
+    }
+  }
+  section.view3 {
+    width: 100%;
+    padding: 3rem 2rem;
+    @include flex-column(4rem);
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+    .top {
+      width: 100%;
+      @include flex-column(1.2rem);
+
+      h2 {
+        opacity: 0.7;
+      }
+      h1 {
+        font-size: 3rem;
+        line-height: 1;
+      }
+      .bottom {
+        margin-top: 1rem;
+        @include flex-column(2rem);
+        button {
+          color: #0468d7;
+          border: 1px solid #0468d7;
+          background-color: transparent;
+          padding: 0.8rem 3rem;
+          border-radius: 2rem;
+          font-weight: 700;
+          width: fit-content;
+        }
+        button:hover {
+          background-color: #0468d7;
+          color: white;
+        }
+        p {
+          margin-left: 2rem;
+          font-weight: 600;
+        }
+      }
+    }
+    .top > p {
+      font-size: 1.3rem;
+      opacity: 0.8;
+    }
+  }
+  section#copy1 {
+    padding: 4rem 2rem;
+    background: linear-gradient(to left bottom, #f5fbff 0%, #f8f8d5 70%);
+    .top {
+      .bottom {
+        #btn {
+          background-color: #0468d7;
+          color: white;
+          border-radius: none;
+        }
+      }
+    }
+  }
+  section#copy3 {
+    padding: 4rem 2rem;
+    background: linear-gradient(to left bottom, #f5fbff 0%, #f8f8d5 70%);
+    .top {
+      .bottom {
+        #btn {
+          background-color: #0468d7;
+          color: white;
+          border-radius: none;
+        }
+      }
+    }
+  }
+  section.view4 {
+    width: 100%;
+    padding: 3rem 2rem;
+    display: flex;
+
+    .top {
+      width: 100%;
+      @include flex-column(1.2rem);
+      padding: 7.5rem 3.3rem;
+
+      border-radius: 3rem;
+      color: white;
+      background-image: url(./get.png);
+      background-size: cover;
+      background-color: #042449;
+
+      h1 {
+        font-size: 3rem;
+        line-height: 1;
+      }
+      .bottom {
+        margin-top: 1rem;
+        @include flex-column(2rem);
+        button {
+          color: #0468d7;
+          border: none;
+          background-color: white;
+          padding: 0.8rem 3rem;
+          border-radius: 2rem;
+          font-weight: 700;
+          width: fit-content;
+        }
+        p {
+          margin-left: 2.5rem;
+          font-weight: 600;
+        }
+      }
+    }
+    .top > p {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  main {
+    nav{
+      .box{
+        img{
+        width: 15%;
+      }
+      }
+    }
+    section.view1 {
+      .top {
+        align-items: center;
+        h1,
+        img {
+          width: 60%;
+        }
+      }
+    }
+    section.view2 {
+      padding: 4rem 4rem;
+      .box {
+        img {
+          width: 60%;
+        }
+      }
+    }
+    section.view3 {
+      padding: 3rem 4rem;
+      img {
+        width: 60%;
+      }
+      .top {
+        .bottom {
+          flex-direction: row;
+          gap: 0rem;
+          align-items: center;
+        }
+      }
+    }
+    section#copy1,
+    section#copy3 {
+      padding: 4rem 4rem;
+    }
+    section.view4 {
+      padding: 3rem 4rem;
+      .top {
+        padding: 4rem 3.3rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    nav {
+      padding: 1rem 4rem;
+      .box {
+        
+        img {
+          width: 13%;
+        }
+        .text {
+          display: flex;
+          width: fit-content;
+
+          p {
+            display: inline-block;
+          }
+          button {
+            display: inline-block;
+          }
+        }
+        #hide {
+          display: none;
+        }
+      }
+    }
+    section.view1 {
+      padding: 4rem 0rem;
+
+      .top {
+        padding: 1rem;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+
+        img {
+          width: 50%;
+        }
+        h1 {
+          width: 33%;
+          font-size: 4.2rem;
+          text-align: left;
+        }
+      }
+      .bottom {
+        width: 75%;
+      }
+    }
+    section.view2 {
+      padding: 4rem 3rem;
+      flex-direction: row;
+      justify-content: center;
+      gap: 1.2rem;
+        .box{
+          width: 30%;
+        }
+    }
+    section.view3 {
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center;
+      gap: 6rem;
+      img{
+        width: 35%;
+      }
+      .top {
+        width: 51%;
+        padding: 0rem 2rem;
+        h1 {
+          font-size: 4.2rem;
+        }
+        .bottom {
+           flex-direction: row;
+          align-items: center;
+          gap: 0rem;
+          button {
+            font-weight: 750;
+          }
+        }
+      }
+    }
+    section#copy1 {
+      flex-direction: row;
+    }
+    section#copy3 {
+      flex-direction: row;
+    }
+    section.view4 {
+      justify-content: center;
+      align-items: center;
+
+      .top {
+        width: 80%;
+        padding: 4rem 3.3rem;
+
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+      }
+      .top {
+        h1 {
+          font-size: 4.2rem;
+        }
+        .bottom {
+          button {
+            font-weight: 750;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1500px) {
+  main {
+    nav {
+      .box {
+        img {
+          width: 10%;
+        }
+      }
+    }
+    section.view1 {
+      .top {
+        h1,
+        img {
+          width: 30%;
+        }
+      }
+      .bottom {
+        width: 55%;
+      }
+    }
+    section.view2 {
+      // gap: 1rem;
+      .box {
+        width: 22%;
+      }
+    }
+    section.view3 {
+      img{
+        width: 25%;
+      }
+      .top {
+        width: 28%;
+        padding: 0rem;
+        h1 {
+          font-size: 3rem;
+        }
+        .bottom {
+          
+
+          p {
+            margin-left: 1rem;
+          }
+          button {
+            padding: 0.5rem 1.5rem;
+          }
+        }
+      }
+      .top > p {
+        font-size: 1.1rem;
+      }
+    }
+    section.view4 {
+      .top {
+        width: 65%;
+      }
+      .top {
+        h1 {
+          font-size: 3rem;
+        }
+        .bottom {
+          flex-direction: row;
+          align-items: center;
+          gap: 0rem;
+
+          p {
+            margin-left: 1rem;
+          }
+          button {
+            padding: 0.5rem 1.5rem;
+          }
+        }
+      }
+      .top > p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
